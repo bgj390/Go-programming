@@ -1,11 +1,14 @@
 // This is the final assignment for http://terokarvinen.com/2020/go-programming-course-2020-w22/#h2
 // In this program a stick figure dude is celebrating
+// Sources:
+// https://gobyexample.com/http-servers
+// https://gobyexample.com/timers
 
 package main
 
 import (
 	"fmt"
-//	"time"
+	"time"
 	"net/http"
 )
 
@@ -34,29 +37,23 @@ func mm(w http.ResponseWriter, req *http.Request) {
 
 func rajahtaa(w http.ResponseWriter, req *http.Request) {
 
-	fmt.Fprintf(w, "🔅\n")
-	fmt.Fprintf(w, "🔆\n")
-	fmt.Fprintf(w, "⭐💥\n")
+	fmt.Fprintf(w, "🔅")
+	fmt.Fprintf(w, "🔆")
+	fmt.Fprintf(w, "⭐💥")
 		
 }
 
 func main() {
-	
+
 	fmt.Println("")	
+
 	http.HandleFunc("/mm", mm)
+
 	fmt.Println("")
 
-	var i int
-//	for i < 6 {
-		http.HandleFunc("/mmt1", tuuletus1)
-		http.HandleFunc("/mmt2", tuuletus2)
-		i++
-//	}
-
-//	for i < 10 {
-		http.HandleFunc("/mmrajah", rajahtaa)
-		i++
-//	}
+	http.HandleFunc("/mmt1", tuuletus1)
+	http.HandleFunc("/mmt2", tuuletus2)		
+	http.HandleFunc("/mmrajah", rajahtaa)	
 
 	fmt.Println("")
 
