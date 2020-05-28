@@ -14,7 +14,7 @@ func tuuletus1(jee chan bool) {
 	
 	time.Sleep(400*time.Millisecond)
 	p("   _🙂_")
-	p(" 🏆|__|⎞")
+	p(" 🏆(__)⎞")
 	p("    ⎭⎩")
 	jee <- true
 }
@@ -24,7 +24,7 @@ func tuuletus2(joo chan bool) {
 	time.Sleep(200*time.Millisecond)
 	p(" 🏆")
 	p("  ⎝_😄_⎠")
-	p("   |__|")
+	p("   (__)")
 	p("   〈 〉")
 	joo <- true
 }

@@ -2,21 +2,21 @@
 // In this program a stick figure dude is celebrating
 // Sources:
 // https://gobyexample.com/http-servers
-// https://gobyexample.com/timers
+
 
 package main
 
 import (
 	"fmt"
-//	"time"
 	"net/http"
 )
 
 
 func tuuletus1(w http.ResponseWriter, req *http.Request) {
 	
+	fmt.Fprintf(w, "       \n")
 	fmt.Fprintf(w, "   _🙂_\n")
-	fmt.Fprintf(w, " 🏆|__|⎞\n")
+	fmt.Fprintf(w, " 🏆(__)⎞\n")
 	fmt.Fprintf(w, "    ⎭⎩\n")
 	
 }
@@ -25,7 +25,7 @@ func tuuletus2(w http.ResponseWriter, req *http.Request) {
 
 	fmt.Fprintf(w, " 🏆\n")
 	fmt.Fprintf(w, "  ⎝_😄_⎠\n")
-	fmt.Fprintf(w, "   |__|\n")
+	fmt.Fprintf(w, "   (__)\n")
 	fmt.Fprintf(w, "   〈 〉\n")
 	
 }
@@ -36,11 +36,10 @@ func mm(w http.ResponseWriter, req *http.Request) {
 }
 
 func rajahtaa(w http.ResponseWriter, req *http.Request) {
-
+	
 	fmt.Fprintf(w, "🔅")
 	fmt.Fprintf(w, "🔆")
-	fmt.Fprintf(w, "⭐💥")
-		
+	fmt.Fprintf(w, "⭐💥")	
 }
 
 func main() {
